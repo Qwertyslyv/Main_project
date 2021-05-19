@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="header">
+				<div class="header-inner">
+				<div class="menu">
+					<a href="Index.html" class="menu-link">home</a>
+					<a href="Index3.html" class="menu-link">work</a>
+					<a href="Index4.html" class="menu-link">team</a>
+					<a href="#" class="menu-link"><img src="inst.png" alt="" class="img-a"></a>
+					<a href="#" class="menu-link"><img src="youtube.png" alt="" class="img-a"></a>
+					<input type="text" name="search" placeholder="SEARCH" class="menu-link"><a href="#" class="header-search-button-a">search</a>
+					<a href="#" class="menu-link" id="clock"></a>
+				</div></div></div>
+
+			<div class="header-main-info">
+				<div class="header-main-title"><h1 id="header-main-title-h1">Breaking news</h1><ul id="header-main-subtitle-p">
+				<li>The site was created on May 19, 2021 by a student of physics and mathematics lyceum.</li>
+			</ul>
+				</div>
+ 
+		</div></div>
+     	<script>
+
+function clock(){
+
+    let date = new Date(),
+        hours = date.getHours(),
+        minutes = date.getMinutes(),
+        seconds = date.getSeconds();
+
+    if (hours < 10) hours = '0' + hours;
+    if (minutes < 10) minutes = '0' + minutes;
+    if (seconds < 10) seconds = '0' + seconds;
+
+    let time = hours + ':' + minutes + ':' + seconds;
+
+    document.getElementById('clock').innerText = time;
+
+    setTimeout(() =>{
+        clock();
+    }, 1000);
+}
+
+clock();
+
+</script>
+</body>
+</html>
